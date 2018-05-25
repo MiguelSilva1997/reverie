@@ -18,7 +18,6 @@ router.patch('/:id', function(req, res, next) {
 })
 
 router.get('/:id', function(req, res, next) {
-  eval(pry.it)
   let robotId = req.params.id
   Robots.getRobot(robotId)
   .then((robot) => {
