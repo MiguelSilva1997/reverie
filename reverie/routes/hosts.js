@@ -28,10 +28,10 @@ router.get('/:id', function(req, res, next) {
 router.post('/', (req, res) => {
     Robots.addRobot(req.body)
     .then((data)=>{
-      if (data.rowCount === 0) {
+      if (data) {
         return res.sendStatus(404)
       }
-      res.status(201).send("Successfully added robot")
+      res.status(201).send({message: "Successfully added robot."})
     })
 })
 
@@ -40,7 +40,7 @@ router.delete('/:id', (req, res) => {
   const robotId = req.params.id
   Robots.deleteFood(robotId)
   .then((data)=>{
-    res.status(201).send("Successfully Deleted Food From Meal")
+    res.status(201).send({message: "Successfully Deleted Robot"})
   })
 })
 
