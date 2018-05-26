@@ -11,7 +11,7 @@ The backend service should provide a RESTful API to interact with the data.
 The backend should be written in Node JS, and all of the testing should be done
 with Chai/Mocha. See the OpenAPI definition in the repo for details about the
 endpoints which should be exposed. Note: Some elements in the OpenAPI definition
-will need to be filled in (host, basePath, operationIds). 
+will need to be filled in (host, basePath, operationIds).
 
 
 ## Frontend
@@ -38,3 +38,10 @@ Included in the repo is a basic Vagrantfile. Your app should run in the Vagrant
 VM with instructions on how to get it to work (if it's not automated by the
 Vagrantfile). If you've never used Vagrant, you can get information about how
 to get started [here](https://www.vagrantup.com/intro/getting-started/).
+
+## Getting started
+
+Clone this repo.
+  * `cd reverie && npm install && knex migrate:latest &&
+knex seed:run && npm start`
+  * `open another terminal and run cd reveriefee && npm install && npm start`
